@@ -26,17 +26,14 @@ int main()
 
     double convert_d = d * 1e3;
 
-    if (lambda == convert_d)
-    {
-        printf("Lambda is equal to slits separation\n");
-    }
-    else if (lambda > convert_d)
+    if (lambda > convert_d)
     {
         printf("Lambda is greater than slits separation\n");
     }
     else
     {
         int order = floor((convert_d * sin(theta_rad)) / lambda);
+
         if (order >= 0)
         {
             printf("\033[0;32m");
